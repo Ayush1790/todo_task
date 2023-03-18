@@ -2,6 +2,7 @@ data = [];
 comp = [];
 let up;
 let b = 1;
+//function for adding task
 function add() {
   if (document.getElementById("new-task").value == "") {
     document.getElementById("msg").innerHTML = "Input box can not be empty.";
@@ -11,6 +12,7 @@ function add() {
   document.getElementById("new-task").value = "";
   display();
 }
+//function for display task
 function display() {
   let count = 0;
   let txt = "";
@@ -30,6 +32,7 @@ function display() {
   });
   document.getElementById("incomplete-tasks").innerHTML = txt;
 }
+//function for delete task
 function deletedata(a, b) {
   if (b == 0) {
     data.splice(a.id, 1);
@@ -39,6 +42,7 @@ function deletedata(a, b) {
     cdisplay();
   }
 }
+//function for edit task
 function editdata(a, b) {
   if (b == 0) {
     document.getElementById("new-task").value = data[a.id];
@@ -52,6 +56,7 @@ function editdata(a, b) {
   document.getElementById("add").style.display = "none";
   document.getElementById("update").style.display = "inline";
 }
+//function for update task
 function updatedata() {
   if (u == 0) {
     data[up.id] = document.getElementById("new-task").value;
@@ -64,6 +69,7 @@ function updatedata() {
   document.getElementById("add").style.display = "inline";
   document.getElementById("new-task").value = "";
 }
+//function for complete task
 function completed(a, b) {
   if (a.checked && b == 0) {
     comp.push(data.splice(a.id, 1));
@@ -75,6 +81,7 @@ function completed(a, b) {
     cdisplay();
   }
 }
+//function for display completed task
 function cdisplay() {
   let ccount = 0;
   let txt = "";
