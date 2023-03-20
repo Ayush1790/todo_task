@@ -18,7 +18,7 @@ function display() {
   let txt = "";
   data.forEach((element) => {
     txt +=
-      "<li><input type='checkbox' onclick='completed(this,0)' id='check" +
+      "<li><input type='checkbox' onclick='completed(this,0)' id='" +
       count +
       "'><label>" +
       element +
@@ -87,7 +87,7 @@ function cdisplay() {
   let txt = "";
   comp.forEach((element) => {
     txt +=
-      "<li><input type='checkbox' onclick='completed(this,1)' id='check" +
+      "<li><input type='checkbox' onclick='completed(this,1)' id='" +
       ccount +
       "'><label>" +
       element +
